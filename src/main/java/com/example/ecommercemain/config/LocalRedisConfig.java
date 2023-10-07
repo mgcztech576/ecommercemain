@@ -6,7 +6,7 @@
 //import redis.embedded.RedisServer;
 //@Configuration
 //public class LocalRedisConfig {
-//    @Value("${spring.data.redis.port}")
+//    @Value("${spring.redis.port}")
 //    private int redisPort;
 //    private RedisServer redisServer;
 //    @PostConstruct public void startRedis(){
