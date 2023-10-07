@@ -7,8 +7,7 @@ import lombok.*;
 public class Customer {@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Enumerated(EnumType.STRING)
-    private String name;
+    private String customerName;
     private Long pw;
     private Long phoneNumber;
 }

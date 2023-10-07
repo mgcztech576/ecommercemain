@@ -10,4 +10,6 @@ public class ProductService {
     @Transactional public void createProduct(){
         Product product=Product.builder().build();
         productRepository.save(product);}
+    @Transactional public Product getProduct(Long id){
+        return productRepository.findById(id).get();}
 }

@@ -10,4 +10,6 @@ public class CartService {
     @Transactional public void createCart(){
         Cart cart= Cart.builder().build();
         cartRepository.save(cart);}
+    @Transactional public Cart getCart(Long id){
+        return cartRepository.findById(id).get();}
 }

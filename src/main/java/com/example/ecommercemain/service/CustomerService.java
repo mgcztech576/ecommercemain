@@ -10,4 +10,6 @@ public class CustomerService {
     @Transactional public void createCustomer(){
         Customer customer=Customer.builder().build();
         customerRepository.save(customer);}
+    @Transactional public Customer getCustomer(Long id){
+        return customerRepository.findById(id).get();}
 }
