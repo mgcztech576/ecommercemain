@@ -6,8 +6,8 @@ import lombok.*;
 @Builder @Entity
 public class Customer {@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String customerName;
-    private Long pw;
-    private Long phoneNumber;
+    private Long cId;
+    private String cName;
+    private Long cPW;
+    private Long cPhoneNumber;
 }

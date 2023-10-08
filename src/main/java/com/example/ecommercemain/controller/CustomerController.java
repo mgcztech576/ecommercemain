@@ -2,16 +2,18 @@ package com.example.ecommercemain.controller;
 import com.example.ecommercemain.domain.Customer;
 import com.example.ecommercemain.service.CustomerService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 @RestController @RequiredArgsConstructor
 public class CustomerController {
     private final CustomerService customerService;
     @GetMapping("/create/customer")
     public String createCart(){
         customerService.createCustomer();return "done";}
-    @GetMapping("/customer/{id}")
-    public Customer getCustomer(@PathVariable Long id){
-        return customerService.getCustomer(id);}
+    //@PostMapping("/customers")
+    //public String createCart(@RequestBody Customer customer){
+    //    customerService.createCustomer(customer);return "done";}
+    @GetMapping("/customer/{cID}")
+    public Customer getCustomer(@PathVariable Long cID){
+        return customerService.getCustomer(cID);}
 }
