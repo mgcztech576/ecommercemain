@@ -6,10 +6,11 @@ import jakarta.persistence.Id;
 import lombok.*;
 @Getter @Setter @NoArgsConstructor
 @AllArgsConstructor @Builder @Entity
-public class Seller {@Id
+public class Seller extends Basis {@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long sID;
     private String sName;
     private Long sPW;
-    private Long sPhoneNumber;
+    private Long sphoneNumber;
+    private String companyName;
     private Long productName;}

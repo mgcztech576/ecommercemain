@@ -3,7 +3,6 @@ import com.example.ecommercemain.domain.Seller;
 import com.example.ecommercemain.repository.SellerRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 import org.springframework.stereotype.Service;
 @Service @RequiredArgsConstructor
 public class SellerService {

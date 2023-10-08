@@ -4,11 +4,13 @@ import lombok.*;
 @Getter @Setter @NoArgsConstructor
 @AllArgsConstructor
 @Builder @Entity
-public class Product {@Id
+public class Product extends Basis {@Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Long companyId;//판매자 id
+    private Long ID;
+    private Long companyID;//판매자 id
     private Long price;
     private Long numbers;//개수
     private String productName;
+    private String detail;//상세 설명
+    private String category;//분류
 }

@@ -4,11 +4,11 @@ import lombok.*;
 @Getter @Setter @NoArgsConstructor
 @AllArgsConstructor
 @Builder @Entity(name = "cart")
-public class Cart { @Id
+public class Cart extends Basis{ @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long userId;
+    private Long cID;
     private String cartProductName;
-    private Long productNumbers;//개수
+    private Long numbers;//개수
     private Long productId;//판매자 id
 }
