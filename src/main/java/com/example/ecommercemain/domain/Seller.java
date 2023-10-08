@@ -11,6 +11,14 @@ public class Seller extends Basis {@Id
     private Long sID;
     private String sName;
     private Long sPW;
-    private Long sphoneNumber;
+    private Long sPhoneNumber;
     private String companyName;
-    private Long productName;}
+    private Long productName;
+    public static Customer sfrom(SellerSignUp sform){
+        return Customer.builder().sID(sform.getSID())
+                .sPW(sform.getSPW()).sName(sform.getSName())
+                .sPhoneNumber(sform.getSPhoneNumber())
+                .companyName(sform.getCompanyName())
+                .productName(sform.getProductName()).build();
+    }
+}
