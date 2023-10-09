@@ -7,6 +7,6 @@ import org.springframework.stereotype.Service;
 @Service @RequiredArgsConstructor
 public class CustomerSignUpService {
     private final CustomerRepository customerRepository;
-    public Customer signUp(CustomerSignUp cSignUp){
-        return customerRepository.save(Customer.cfrom(cSignUp));}
+    public Customer cSignUp(CustomerSignUp cuSignUp){
+        return customerRepository.save(Customer.cfrom(cuSignUp));}
 }

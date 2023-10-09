@@ -9,8 +9,11 @@ public class CustomerController {
     private final CustomerService customerService;
     @PostMapping("/create/customer")
     public Customer createCustomer(@RequestBody CustomerSignUp cSignUp){
-        Customer customer1=Customer.builder().build();
-        customerService.createCustomer();return customer1;}
+        Customer customer1=Customer.builder()
+                .cID(cSignUp.getCID())
+                .cPW(cSignUp.getCPW())
+                .cName(cSignUp.getCName())
+                .cPhoneNumber(cSignUp.getCPhoneNumber()).build();return customer1;}
     @GetMapping("/customer/{cID}")
     public Customer getCustomer(@PathVariable Long cID){
         return customerService.getCustomer(cID);}
