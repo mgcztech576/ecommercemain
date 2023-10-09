@@ -1,7 +1,8 @@
 //package com.example.ecommercemain.config;
 //import jakarta.annotation.PostConstruct;
 //import jakarta.annotation.PreDestroy;
-//import lombok.Value;
+////import lombok.Value;
+//import org.springframework.beans.factory.annotation.Value;
 //import org.springframework.context.annotation.Configuration;
 //import redis.embedded.RedisServer;
 //@Configuration

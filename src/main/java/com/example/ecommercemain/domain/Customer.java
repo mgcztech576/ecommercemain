@@ -1,4 +1,5 @@
 package com.example.ecommercemain.domain;
+import com.example.ecommercemain.signup.CustomerSignUp;
 import jakarta.persistence.*;
 import lombok.*;
 @Getter @Setter @NoArgsConstructor

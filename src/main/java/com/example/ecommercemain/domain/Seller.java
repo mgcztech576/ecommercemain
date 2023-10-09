@@ -1,4 +1,5 @@
 package com.example.ecommercemain.domain;
+import com.example.ecommercemain.signup.SellerSignUp;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,12 +14,11 @@ public class Seller extends Basis {@Id
     private Long sPW;
     private Long sPhoneNumber;
     private String companyName;
-    private Long productName;
-    public static Customer sfrom(SellerSignUp sform){
-        return Customer.builder().sID(sform.getSID())
+    private String productName;
+    public static Seller sfrom(SellerSignUp sform){
+        return Seller.builder().sID(sform.getSID())
                 .sPW(sform.getSPW()).sName(sform.getSName())
                 .sPhoneNumber(sform.getSPhoneNumber())
                 .companyName(sform.getCompanyName())
-                .productName(sform.getProductName()).build();
-    }
+                .productName(sform.getProductName()).build();}
 }
