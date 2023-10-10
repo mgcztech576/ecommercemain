@@ -1,7 +1,7 @@
 package com.example.ecommercemain.controller;
 import com.example.ecommercemain.domain.Customer;
 import com.example.ecommercemain.service.CustomerService;
-import com.example.ecommercemain.service.RedisTestService;
+//import com.example.ecommercemain.service.RedisTestService;
 import com.example.ecommercemain.signup.CustomerSignUp;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/create/customer")
 @RequiredArgsConstructor
 public class CustomerController {
-    private final RedisTestService redisTestService;
+    //private final RedisTestService redisTestService;
     private final CustomerService customerService;
     @PostMapping
     public Customer createCustomer(@RequestBody CustomerSignUp cSignUp) {
@@ -20,8 +20,8 @@ public class CustomerController {
 //                .cPW(cSignUp.getCPW())
 //                .cName(cSignUp.getCName())
 //                .cPhoneNumber(cSignUp.getCPhoneNumber()).build();return customer1;}
-    @GetMapping("/get-lock")
-    public String getLock(){return redisTestService.getLock();}
+    //@GetMapping("/get-lock")
+    //public String getLock(){return redisTestService.getLock();}
     @GetMapping("/customer/{cID}")
     public Customer getCustomer(@PathVariable Long cID){
         return customerService.getCustomer(cID);}

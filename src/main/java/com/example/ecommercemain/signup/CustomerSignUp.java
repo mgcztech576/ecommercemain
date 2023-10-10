@@ -22,5 +22,6 @@ public class CustomerSignUp {@Id//고객용
     public static Customer cfrom(CustomerSignUp cSignUp){
         Customer customer=Customer.builder().cID(cSignUp.getCID())
                 .cPW(cSignUp.getCPW()).cName(cSignUp.getCName())
-                .cPhoneNumber(cSignUp.getCPhoneNumber()).build(); return customer;}
+                .cPhoneNumber(cSignUp.getCPhoneNumber())
+                .build(); return customer;}
 }
