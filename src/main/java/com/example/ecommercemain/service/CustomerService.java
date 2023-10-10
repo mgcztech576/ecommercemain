@@ -8,12 +8,17 @@ import org.springframework.stereotype.Service;
 @Service @RequiredArgsConstructor
 public class CustomerService {
     private final CustomerRepository customerRepository;
-    @Transactional public void createCustomer(){
-        Customer customer=Customer.builder().build();
-        customerRepository.save(customer);}
+    //@Transactional public createCustomer(CustomerSignUp cSignUp){
+        //Customer customer=Customer.builder().build();
+       // Customer save= customerRepository.save(customer); return save;}
     @Transactional public Customer getCustomer(Long cID){
         return customerRepository.findById(cID).get();}
-    public Customer createCustomer2(CustomerSignUp cSignUp) {
-        Customer from=Customer.cfrom(cSignUp);
-        Customer save=customerRepository.save(from); return save;}
+    public Customer createCustomer(CustomerSignUp cSignUp) {
+        Customer customer=Customer.cfrom(cSignUp);
+//        Customer customer=Customer.builder()
+//                .cID(cSignUp.getCID())
+//                .cPW(cSignUp.getCPW())
+//                .cName(cSignUp.getCName())
+//                .cPhoneNumber(cSignUp.getCPhoneNumber()).build();
+        Customer save=customerRepository.save(customer); return save;}
 }
