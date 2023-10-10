@@ -10,15 +10,18 @@ import lombok.*;
 public class Seller extends Basis {@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long sID;
+    private Long sAccountNumber;
     private String sName;
     private Long sPW;
     private Long sPhoneNumber;
     private String companyName;
     private String productName;
-    public static Seller sfrom(SellerSignUp sform){
-        return Seller.builder().sID(sform.getSID())
-                .sPW(sform.getSPW()).sName(sform.getSName())
-                .sPhoneNumber(sform.getSPhoneNumber())
-                .companyName(sform.getCompanyName())
-                .productName(sform.getProductName()).build();}
+    public static Seller sfrom(SellerSignUp seSignUp){
+        return Seller.builder().sID(seSignUp.getSID())
+                .sAccountNumber(seSignUp.getSAccountNumber())
+                .sPW(seSignUp.getSPW())
+                .sName(seSignUp.getSName())
+                .sPhoneNumber(seSignUp.getSPhoneNumber())
+                .companyName(seSignUp.getCompanyName())
+                .productName(seSignUp.getProductName()).build();}
 }

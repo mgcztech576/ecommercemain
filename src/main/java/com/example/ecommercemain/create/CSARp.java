@@ -1,13 +1,13 @@
-package com.example.ecommercemain.signup;
-//import com.example.ecommercemain.domain.Customer;
+package com.example.ecommercemain.create;
+import com.example.ecommercemain.domain.Basis;
 import com.example.ecommercemain.domain.Seller;
+import com.example.ecommercemain.signup.SellerSignUp;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -15,7 +15,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @Builder
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-public class SellerSignUp { @Id//판매자용
+public class CSARp extends Basis {@Id//CreateSellerAccountResponse
     @GeneratedValue
     private Long sID;
     private Long sAccountNumber;

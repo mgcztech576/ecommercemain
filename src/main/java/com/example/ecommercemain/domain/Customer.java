@@ -8,12 +8,14 @@ import lombok.*;
 public class Customer extends Basis {@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cID;
+    private Long cAccountNumber;//계좌 번호
     private String cName;
     private Long cPW;
     private Long cPhoneNumber;
-    public static Customer cfrom(CustomerSignUp cform){
-        return Customer.builder().cID(cform.getCID())
-                .cPW(cform.getCPW())
-                .cName(cform.getCName())
-                .cPhoneNumber(cform.getCPhoneNumber()).build();}
+    public static Customer cfrom(CustomerSignUp cSignUp){
+        return Customer.builder().cID(cSignUp.getCID())
+                .cAccountNumber(cSignUp.getCAccountNumber())
+                .cPW(cSignUp.getCPW())
+                .cName(cSignUp.getCName())
+                .cPhoneNumber(cSignUp.getCPhoneNumber()).build();}
 }

@@ -6,10 +6,10 @@ import lombok.*;
 @Builder @Entity
 public class Product extends Basis {@Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ID;
+    private Long pID;//물품 id
     private Long companyID;//판매자 id
     private Long price;
-    private Long numbers;//개수
+    private Long count;//개수
     private String productName;
     private String detail;//상세 설명
     private String category;//분류
