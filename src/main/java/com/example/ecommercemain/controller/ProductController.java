@@ -13,7 +13,7 @@ public class ProductController {
     @PostMapping
     public Product createProduct(@RequestBody CreateProductList cpl){
         Product product=productService.createProduct(cpl);return product;}
-    @GetMapping("/product/{id}")
-    public Product getProduct(@PathVariable Long id){
-        return productService.getProduct(id);}
+    @GetMapping("/product/{pID}")
+    public Product getProduct(@PathVariable Long pID){
+        return productService.getProduct(pID);}
 }

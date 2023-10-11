@@ -13,7 +13,7 @@ public class CartController {
     @PostMapping
     public Cart createCart(@RequestBody CreateCart createCart){
         Cart cart=cartService.createCart(createCart);return cart;}
-    @GetMapping("/cart/{id}")
-    public Cart getCart(@PathVariable Long id){
-        return cartService.getCart(id);}
+    @GetMapping("/cart/{cartID}")
+    public Cart getCart(@PathVariable Long cartID){
+        return cartService.getCart(cartID);}
 }
