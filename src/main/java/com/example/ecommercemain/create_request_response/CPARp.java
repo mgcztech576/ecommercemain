@@ -1,14 +1,19 @@
-package com.example.ecommercemain.domain;
+package com.example.ecommercemain.create_request_response;
+import com.example.ecommercemain.domain.Basis;
+import com.example.ecommercemain.domain.Product;
 import com.example.ecommercemain.signup.CreateProductList;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-@Getter @Setter @NoArgsConstructor
+@Getter
+@Setter
 @AllArgsConstructor
-@Builder @Entity
+@NoArgsConstructor
+@Builder
+@Entity
 @EntityListeners(AuditingEntityListener.class)
-public class Product extends Basis {@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+public class CPARp extends Basis {@Id//CreateProductAccountResponse
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long pID;//물품 id
     private Long companyID;//판매자 id
     private Long price;

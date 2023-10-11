@@ -1,14 +1,18 @@
-package com.example.ecommercemain.domain;
-import com.example.ecommercemain.signup.CreateCart;
+package com.example.ecommercemain.signup;
+import com.example.ecommercemain.domain.Basis;
+import com.example.ecommercemain.domain.Cart;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-@Getter @Setter @NoArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
 @AllArgsConstructor
-@Builder @Entity
+@Builder
+@Entity
 @EntityListeners(AuditingEntityListener.class)
-public class Cart extends Basis{ @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class CreateCart extends Basis {@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cartID;
     private Long cAccountNumber;
     private Long cID;

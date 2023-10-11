@@ -1,4 +1,4 @@
-package com.example.ecommercemain.create;
+package com.example.ecommercemain.create_request_response;
 import lombok.Getter;
 import lombok.Setter;
 @Getter @Setter

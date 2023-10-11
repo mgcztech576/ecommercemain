@@ -1,4 +1,4 @@
-package com.example.ecommercemain.create;
+package com.example.ecommercemain.create_request_response;
 import com.example.ecommercemain.domain.Basis;
 import com.example.ecommercemain.domain.Seller;
 import com.example.ecommercemain.signup.SellerSignUp;

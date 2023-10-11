@@ -1,11 +1,8 @@
-package com.example.ecommercemain.create;
+package com.example.ecommercemain.create_request_response;
 import com.example.ecommercemain.domain.Basis;
 import com.example.ecommercemain.domain.Customer;
 import com.example.ecommercemain.signup.CustomerSignUp;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EntityListeners;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @Getter
@@ -15,9 +12,9 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @Builder
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-public class CCARp extends Basis {@Id//CreateCustomerAccountResponse
-    @GeneratedValue
-    private Long cID;
+public class CCartARp extends Basis {@Id//CreateCartAccountResponse
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+private Long cID;
     private Long cAccountNumber;
     private String cName;
     private Long cPW;
