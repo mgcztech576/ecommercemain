@@ -16,12 +16,12 @@ public class Seller extends Basis {@Id
     private Long sPhoneNumber;
     private String companyName;
     private String productName;
-    public static Seller sfrom(SellerSignUp seSignUp){
-        return Seller.builder().sID(seSignUp.getSID())
-                .sAccountNumber(seSignUp.getSAccountNumber())
-                .sPW(seSignUp.getSPW())
-                .sName(seSignUp.getSName())
-                .sPhoneNumber(seSignUp.getSPhoneNumber())
-                .companyName(seSignUp.getCompanyName())
-                .productName(seSignUp.getProductName()).build();}
+//    public static Seller sfrom(SellerSignUp seSignUp){
+//        return Seller.builder().sID(seSignUp.getSID())
+//                .sAccountNumber(seSignUp.getSAccountNumber())
+//                .sPW(seSignUp.getSPW())
+//                .sName(seSignUp.getSName())
+//                .sPhoneNumber(seSignUp.getSPhoneNumber())
+//                .companyName(seSignUp.getCompanyName())
+//                .productName(seSignUp.getProductName()).build();}
 }

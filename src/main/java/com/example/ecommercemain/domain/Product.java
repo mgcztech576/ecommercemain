@@ -16,13 +16,13 @@ public class Product extends Basis {@Id
     private String productName;
     private String detail;//상세 설명
     private String category;//분류
-    public static Product pfrom(CreateProductList cpl){
-        Product product= Product.builder().pID(cpl.getPID())
-                .companyID(cpl.getCompanyID())
-                .price(cpl.getPrice())
-                .remainCount(cpl.getRemainCount())
-                .productName(cpl.getProductName())
-                .detail(cpl.getDetail())
-                .category(cpl.getCategory())
-                .build();return product;}
+//    public static Product pfrom(CreateProductList cpl){
+//        Product product= Product.builder().pID(cpl.getPID())
+//                .companyID(cpl.getCompanyID())
+//                .price(cpl.getPrice())
+//                .remainCount(cpl.getRemainCount())
+//                .productName(cpl.getProductName())
+//                .detail(cpl.getDetail())
+//                .category(cpl.getCategory())
+//                .build();return product;}
 }

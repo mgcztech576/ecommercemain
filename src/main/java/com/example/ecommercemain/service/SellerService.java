@@ -12,6 +12,6 @@ public class SellerService {
     @Transactional public Seller getSeller(Long sID){
         return sellerRepository.findById(sID).get();}
     public Seller createSeller(SellerSignUp seSignUp){
-        Seller seller= Seller.sfrom(seSignUp);
+        Seller seller= SellerSignUp.sfrom(seSignUp);
         Seller save=sellerRepository.save(seller); return save;}
 }

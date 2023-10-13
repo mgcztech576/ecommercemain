@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 public class ProductService {
     private final ProductRepository productRepository;
     public Product createProduct(CreateProductList cpl){
-        Product product=Product.pfrom(cpl);
+        Product product=CreateProductList.pfrom(cpl);
         Product save=productRepository.save(product); return save;}
     @Transactional public Product getProduct(Long id){
         return productRepository.findById(id).get();}

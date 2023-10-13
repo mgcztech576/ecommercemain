@@ -1,5 +1,6 @@
 package com.example.ecommercemain.controller;
 import com.example.ecommercemain.domain.Customer;
+import com.example.ecommercemain.login.LoginRequest;
 import com.example.ecommercemain.service.CustomerService;
 //import com.example.ecommercemain.service.RedisTestService;
 import com.example.ecommercemain.signup.CustomerSignUp;
@@ -15,14 +16,16 @@ public class CustomerController {
     public Customer createCustomer(@RequestBody CustomerSignUp cSignUp) {
         Customer customer=customerService
                 .createCustomer(cSignUp); return customer;}
-//        Customer customer1=Customer.builder()
-//                .cID(cSignUp.getCID())
-//                .cPW(cSignUp.getCPW())
-//                .cName(cSignUp.getCName())
-//                .cPhoneNumber(cSignUp.getCPhoneNumber()).build();return customer1;}
     //@GetMapping("/get-lock")
     //public String getLock(){return redisTestService.getLock();}
     @GetMapping("/customer/{cID}")
     public Customer getCustomer(@PathVariable Long cID){
         return customerService.getCustomer(cID);}
+    @GetMapping("/provision")
+    public String Provision(){
+        return "회원 가입을 위해 정보를 제공하신다는 " +
+                "약관에 동의하십니까? 원하시면 정보 제공을 요청합니다.";}
+    @PostMapping("/login")
+    public String login(@RequestBody LoginRequest req){
+        return customerService.login(req);}
 }

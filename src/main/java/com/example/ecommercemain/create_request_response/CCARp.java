@@ -10,19 +10,9 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Entity
-@EntityListeners(AuditingEntityListener.class)
 public class CCARp extends Basis {@Id//CreateCustomerAccountResponse
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long cID;
-    private Long cAccountNumber;
     private String cName;
     private Long cPW;
     private Long cPhoneNumber;
-    public static Customer cfrom(CustomerSignUp cSignUp){
-        Customer customer=Customer.builder().cID(cSignUp.getCID())
-                .cAccountNumber(cSignUp.getCAccountNumber())
-                .cPW(cSignUp.getCPW()).cName(cSignUp.getCName())
-                .cPhoneNumber(cSignUp.getCPhoneNumber())
-                .build(); return customer;}
 }

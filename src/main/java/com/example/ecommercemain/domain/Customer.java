@@ -15,10 +15,4 @@ public class Customer extends Basis {@Id
     private String cName;
     private Long cPW;
     private Long cPhoneNumber;
-    public static Customer cfrom(CustomerSignUp cSignUp){
-        Customer customer= Customer.builder().cID(cSignUp.getCID())
-                .cAccountNumber(cSignUp.getCAccountNumber())
-                .cPW(cSignUp.getCPW()).cName(cSignUp.getCName())
-                .cPhoneNumber(cSignUp.getCPhoneNumber())
-                .build();return customer;}
 }

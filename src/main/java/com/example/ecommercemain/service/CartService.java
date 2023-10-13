@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 public class CartService {
     private final CartRepository cartRepository;
     public Cart createCart(CreateCart createCart){
-        Cart cart= Cart.cartfrom(createCart);
+        Cart cart= CreateCart.cartfrom(createCart);
         Cart save=cartRepository.save(cart); return save;}
     @Transactional public Cart getCart(Long id){
         return cartRepository.findById(id).get();}
