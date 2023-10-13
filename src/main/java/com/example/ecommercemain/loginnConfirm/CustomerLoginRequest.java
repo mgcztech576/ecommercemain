@@ -1,11 +1,11 @@
-package com.example.ecommercemain.login;
+package com.example.ecommercemain.loginnConfirm;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class LoginRequest {
+public class CustomerLoginRequest {
     private String cName;
-    private String cPW;
+    private Long cPW;
 }

@@ -1,6 +1,6 @@
 package com.example.ecommercemain.controller;
 import com.example.ecommercemain.domain.Customer;
-import com.example.ecommercemain.login.LoginRequest;
+import com.example.ecommercemain.loginnConfirm.CustomerLoginRequest;
 import com.example.ecommercemain.service.CustomerService;
 //import com.example.ecommercemain.service.RedisTestService;
 import com.example.ecommercemain.signup.CustomerSignUp;
@@ -22,10 +22,10 @@ public class CustomerController {
     public Customer getCustomer(@PathVariable Long cID){
         return customerService.getCustomer(cID);}
     @GetMapping("/provision")
-    public String Provision(){
-        return "회원 가입을 위해 정보를 제공하신다는 " +
+    public String CustomerProvision(){
+        return "고객으로서의 회원 가입을 위해 정보를 제공하신다는 " +
                 "약관에 동의하십니까? 원하시면 정보 제공을 요청합니다.";}
-    @PostMapping("/login")
-    public String login(@RequestBody LoginRequest req){
-        return customerService.login(req);}
+    @PostMapping("/cLogin")
+    public String cLogin(@RequestBody CustomerLoginRequest cLReq){
+        return customerService.cLogin(cLReq);}
 }

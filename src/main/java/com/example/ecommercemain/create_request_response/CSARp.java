@@ -13,23 +13,12 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Entity
-@EntityListeners(AuditingEntityListener.class)
+
 public class CSARp extends Basis {@Id//CreateSellerAccountResponse
     @GeneratedValue
-    private Long sID;
-    private Long sAccountNumber;
     private String sName;
     private Long sPW;
     private Long sPhoneNumber;
     private String companyName;
     private String productName;
-    public static Seller sfrom(SellerSignUp seSignUp){
-        Seller seller=Seller.builder().sID(seSignUp.getSID())
-                .sAccountNumber(seSignUp.getSAccountNumber())
-                .sPW(seSignUp.getSPW()).sName(seSignUp.getSName())
-                .sPhoneNumber(seSignUp.getSPhoneNumber())
-                .companyName(seSignUp.getCompanyName())
-                .productName(seSignUp.getProductName())
-                .build(); return seller;}
 }
