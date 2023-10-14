@@ -15,7 +15,7 @@ public class Seller extends Basis {@Id
     private Long sPW;
     private Long sPhoneNumber;
     private String companyName;
-    private String productName;
+    private String pName;//물품 이름
 //    public static Seller sfrom(SellerSignUp seSignUp){
 //        return Seller.builder().sID(seSignUp.getSID())
 //                .sAccountNumber(seSignUp.getSAccountNumber())

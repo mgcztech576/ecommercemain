@@ -16,12 +16,12 @@ public class SellerSignUp { @Id//판매자용
     private Long sPW;
     private Long sPhoneNumber;
     private String companyName;
-    private String productName;
+    private String pName;
     public static Seller sfrom(SellerSignUp seSignUp){
         Seller seller=Seller.builder()
                 .sPW(seSignUp.getSPW()).sName(seSignUp.getSName())
                 .sPhoneNumber(seSignUp.getSPhoneNumber())
                 .companyName(seSignUp.getCompanyName())
-                .productName(seSignUp.getProductName())
+                .pName(seSignUp.getPName())
                 .build(); return seller;}
 }

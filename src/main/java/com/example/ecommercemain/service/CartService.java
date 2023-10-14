@@ -20,7 +20,7 @@ public class CartService {
     @Transactional public Cart getCart(Long id){
         return cartRepository.findById(id).get();}
     public String pconfirm(ProductConfirm confirm){// 물품 확인
-        Product productConfirm= ProductRepository.findByPName(confirm.getPName());
+        Product productConfirm= productRepository.findByPName(confirm.getPName());
         if(productConfirm.getPID().longValue()==confirm.getPID()){
             return "Success";} return "Fail";}
 }

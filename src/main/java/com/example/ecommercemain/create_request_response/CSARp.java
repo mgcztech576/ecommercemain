@@ -13,7 +13,6 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-
 public class CSARp extends Basis {@Id//CreateSellerAccountResponse
     @GeneratedValue
     private String sName;

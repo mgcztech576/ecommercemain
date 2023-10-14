@@ -16,14 +16,14 @@ public class CreateCart extends Basis {@Id
     private Long cartID;
     private Long cAccountNumber;
     private Long cID;
-    private String ProductName;
+    private String pName;
     private Long count;//물건 개수
     private Long sID;//판매자 id
     public static Cart cartfrom(CreateCart createCart){
         Cart cart=Cart.builder().cartID(createCart.getCartID())
                 .cAccountNumber(createCart.getCAccountNumber())
                 .cID(createCart.getCID())
-                .ProductName(createCart.getProductName())
+                .pName(createCart.getPName())
                 .count(createCart.getCount())
                 .sID(createCart.getSID())
                 .build(); return cart;}

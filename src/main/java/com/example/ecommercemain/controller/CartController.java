@@ -2,7 +2,6 @@ package com.example.ecommercemain.controller;
 import com.example.ecommercemain.domain.Cart;
 import com.example.ecommercemain.loginnConfirm.ProductConfirm;
 import com.example.ecommercemain.service.CartService;
-import com.example.ecommercemain.service.ProductService;
 import com.example.ecommercemain.signup.CreateCart;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +18,5 @@ public class CartController {
         return cartService.getCart(cartID);}
     @PostMapping("/pConfirm")
     public String pConfirm(@RequestBody ProductConfirm confirm){
-        return cartService.pConfirm(confirm);}
-
+        return cartService.pconfirm(confirm);}
 }
