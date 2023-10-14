@@ -14,8 +14,8 @@ public class ProductService {
     public Product createProduct(CreateProductList cpl){
         Product product=CreateProductList.pfrom(cpl);
         Product save=productRepository.save(product); return save;}
-    public String pconfirm(ProductConfirm confirm){// 물품 확인
-        Product productConfirm= productRepository.findBypName(confirm.getPName());
-        if(productConfirm.getPID().longValue()==confirm.getPID()){
-            return "Success";} return "Fail";}
+//    public String pconfirm(ProductConfirm confirm){// 물품 확인
+//        Product productConfirm= productRepository.findBypName(confirm.getPName());
+//        if(productConfirm.getPID().longValue()==confirm.getPID()){
+//            return "Success";} return "Fail";}
 }

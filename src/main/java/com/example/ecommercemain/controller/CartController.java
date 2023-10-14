@@ -1,5 +1,6 @@
 package com.example.ecommercemain.controller;
 import com.example.ecommercemain.domain.Cart;
+import com.example.ecommercemain.loginnConfirm.ProductConfirm;
 import com.example.ecommercemain.service.CartService;
 import com.example.ecommercemain.signup.CreateCart;
 import lombok.RequiredArgsConstructor;
@@ -15,4 +16,7 @@ public class CartController {
     @GetMapping("/cart/{cartID}")
     public Cart getCart(@PathVariable Long cartID){
         return cartService.getCart(cartID);}
+    @PostMapping("/pConfirm")
+    public String pConfirm(@RequestBody ProductConfirm confirm){
+        return cartService.pconfirm(confirm);}
 }

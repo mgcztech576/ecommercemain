@@ -17,7 +17,7 @@ public class ProductController {
     @GetMapping("/product/{pID}")
     public Product getProduct(@PathVariable Long pID){
         return productService.getProduct(pID);}
-    @PostMapping("/pConfirm")
-    public String pConfirm(@RequestBody ProductConfirm confirm){
-        return productService.pconfirm(confirm);}
+//    @PostMapping("/pConfirm")
+//    public String pConfirm(@RequestBody ProductConfirm confirm){
+//        return productService.pconfirm(confirm);}
 }
