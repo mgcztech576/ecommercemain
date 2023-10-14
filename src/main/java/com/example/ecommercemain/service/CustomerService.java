@@ -15,7 +15,7 @@ public class CustomerService {
         Customer customer=CustomerSignUp.cfrom(cSignUp);
         Customer save=customerRepository.save(customer); return save;}
     public String cLogin(CustomerLoginRequest cLReq){
-        Customer reqCustomer= customerRepository.findByCName(cLReq.getCName());
+        Customer reqCustomer= customerRepository.findBycName(cLReq.getCName());
         if(reqCustomer.getCPW().longValue()==cLReq.getCPW()){
             return "Success";} return "Fail";}
 }

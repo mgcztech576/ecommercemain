@@ -15,7 +15,7 @@ public class SellerService {
         Seller seller= SellerSignUp.sfrom(seSignUp);
         Seller save=sellerRepository.save(seller); return save;}
     public String sLogin(SellerLoginRequest sLReq){
-        Seller reqSeller= sellerRepository.findBySName(sLReq.getSName());
+        Seller reqSeller= sellerRepository.findBysName(sLReq.getSName());
         if(reqSeller.getSPW().longValue()==sLReq.getSPW()){
             return "Success";} return "Fail";}
 }
