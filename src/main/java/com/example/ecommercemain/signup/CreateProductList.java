@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class CreateProductList {@Id
-@GeneratedValue
+    @GeneratedValue
     private Long companyName;//판매자 id
     private Long price;
     private Long remainCount;//남은 개수

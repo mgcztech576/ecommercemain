@@ -2,7 +2,6 @@ package com.example.ecommercemain.create_request_response;
 import com.example.ecommercemain.domain.Basis;
 import jakarta.persistence.*;
 import lombok.*;
-
 @Getter
 @Setter
 @AllArgsConstructor

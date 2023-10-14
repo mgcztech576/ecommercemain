@@ -1,12 +1,15 @@
 package com.example.ecommercemain.signup;
 import com.example.ecommercemain.domain.Customer;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.*;
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class CustomerSignUp{//고객용
+public class CustomerSignUp{@Id//고객용
+    @GeneratedValue
     private String cName;
     private Long cPW;
     private Long cPhoneNumber;

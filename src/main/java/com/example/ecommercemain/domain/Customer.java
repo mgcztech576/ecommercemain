@@ -1,9 +1,7 @@
 package com.example.ecommercemain.domain;
-import com.example.ecommercemain.signup.CustomerSignUp;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
 @Getter @Setter @NoArgsConstructor
 @AllArgsConstructor
 @Builder @Entity

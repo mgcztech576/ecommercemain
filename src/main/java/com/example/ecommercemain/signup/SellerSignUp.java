@@ -3,8 +3,6 @@ import com.example.ecommercemain.domain.Seller;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.*;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
 @Getter
 @Setter
 @AllArgsConstructor

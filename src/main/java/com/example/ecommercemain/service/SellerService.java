@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 @Service @RequiredArgsConstructor
 public class SellerService {
     private final SellerRepository sellerRepository;
-
     @Transactional public Seller getSeller(Long sID){
         return sellerRepository.findById(sID).get();}
     public Seller createSeller(SellerSignUp seSignUp){

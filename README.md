@@ -8,7 +8,7 @@
 
 4. 장바구니 추가, 확인, 변경, 삭제 - 고객이 장바구니 에다 물품을 추가 시킨 뒤 어떤 물품이 담겨 있는지를 확인하고 원치 않는 물품은 명단에서 변경, 삭제하기
 
-### build.grade
+### build.gradle
 Spring Web, Spring Data JPA, H2 Database, Lombok, Validation
 ### 기술 스택
 Java, Spring, H2 Database
