@@ -28,8 +28,10 @@ public class CustomerController {
     @PostMapping("/cLogin")
     public String cLogin(@RequestBody CustomerLoginRequest cLReq){
         return customerService.cLogin(cLReq);}
-//    @DeleteMapping
-//    public Customer deleteCustomer(@RequestBody CustomerSignUp cSignUp) {
-//        Customer customer=customerService
-//                .deleteCustomer(cSignUp); return customer;}
+    @PutMapping ("/{cID}")
+    public Customer updateCustomer(@PathVariable Long cID, @RequestBody CustomerSignUp cSignUp){
+        Customer updated=customerService.updateCustomer(cID,cSignUp); return updated;}
+    @DeleteMapping("/{cID}")
+    public void deleteCustomer(@PathVariable Long cID){
+        customerService.deleteCustomer(cID);}
 }

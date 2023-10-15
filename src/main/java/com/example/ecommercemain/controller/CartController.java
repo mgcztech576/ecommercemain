@@ -16,7 +16,7 @@ public class CartController {
     @GetMapping("/cart/{cartID}")
     public Cart getCart(@PathVariable Long cartID){
         return cartService.getCart(cartID);}
-    @PostMapping("/pConfirm")
+    @PostMapping("/pConfirm")//장바구니가 있고, 장바구니에 특정 물품이 있는지 확인
     public String pConfirm(@RequestBody ProductConfirm confirm){
         return cartService.pconfirm(confirm);}
 }

@@ -1,4 +1,5 @@
 package com.example.ecommercemain.domain;
+import com.example.ecommercemain.signup.CustomerSignUp;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -13,4 +14,8 @@ public class Customer extends Basis {@Id
     private String cName;
     private Long cPW;
     private Long cPhoneNumber;
+    public void update(CustomerSignUp cSignUp){
+        this.cName=cSignUp.getCName();
+        this.cPW=cSignUp.getCPW();
+        this.cPhoneNumber=cSignUp.getCPhoneNumber();}
 }

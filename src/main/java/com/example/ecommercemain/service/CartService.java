@@ -15,8 +15,12 @@ public class CartService {
     public Cart createCart(CreateCart createCart){
         Cart cart= CreateCart.cartfrom(createCart);
         Cart save=cartRepository.save(cart); return save;}
-    public String pconfirm(ProductConfirm confirm){// 물품 확인
-        Product productConfirm= cartRepository.findBypName(confirm.getPName());
-        if(productConfirm.getPID().longValue()==confirm.getPID()){
-            return "Success";} return "Fail";}
+//    public String pconfirm(ProductConfirm confirm){// 물품 확인
+//        Product productConfirm= cartRepository.findBypName(confirm.getPName());
+//        if(productConfirm.getPID().longValue()==confirm.getPID()){
+//            return "Success";} return "Fail";}
+public String pconfirm(ProductConfirm confirm){// 물품 확인
+    Product productConfirm= cartRepository.findBypName(confirm.getPName());
+    if(productConfirm.getPID().longValue()==confirm.getPID()){
+        return "Success";} return "Fail";}
 }

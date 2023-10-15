@@ -5,4 +5,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer,Long> {
     Customer findBycName(String cName);
+    Customer findBycID(Long cID);
+    void deleteBycID(Long cID);
 }
