@@ -1,4 +1,5 @@
 package com.example.ecommercemain.domain;
+import com.example.ecommercemain.signup.CreateCart;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -14,6 +15,8 @@ public class Cart extends Basis{ @Id
     private String pName;
     private Long cAccountNumber;
     private Long sID;
+    public void cartUpdate(CreateCart createCart){
+        this.count=createCart.getCount();}
     //private Long sID;//판매 회사 id
 //    public static Cart cartfrom(CreateCart createCart){
 //        Cart cart=Cart.builder()

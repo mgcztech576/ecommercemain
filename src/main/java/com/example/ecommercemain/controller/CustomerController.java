@@ -30,7 +30,7 @@ public class CustomerController {
         return customerService.cLogin(cLReq);}
     @PutMapping ("/{cID}")
     public Customer updateCustomer(@PathVariable Long cID, @RequestBody CustomerSignUp cSignUp){
-        Customer updated=customerService.updateCustomer(cID,cSignUp); return updated;}
+        Customer cUpdated=customerService.updateCustomer(cID,cSignUp); return cUpdated;}
     @DeleteMapping("/{cID}")
     public void deleteCustomer(@PathVariable Long cID){
         customerService.deleteCustomer(cID);}

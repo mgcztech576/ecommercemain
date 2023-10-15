@@ -5,4 +5,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SellerRepository extends JpaRepository<Seller,Long> {
     Seller findBysName(String sName);
+    Seller findBysID(Long sID);
+    void deleteBysID(Long sID);
 }

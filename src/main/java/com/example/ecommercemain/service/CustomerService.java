@@ -26,7 +26,7 @@ public String cLogin(CustomerLoginRequest cLReq){
     return "OK";}
     public Customer updateCustomer(Long cID, CustomerSignUp cSignUp){
         Customer saved=customerRepository.findBycID(cID);
-        saved.update(cSignUp); return saved;}
+        saved.cUpdate(cSignUp); return saved;}
     public void deleteCustomer(Long cID){
         customerRepository.deleteBycID(cID);}
 }

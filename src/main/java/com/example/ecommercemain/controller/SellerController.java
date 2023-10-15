@@ -24,4 +24,10 @@ public class SellerController {
     @PostMapping("/sLogin")
     public String sLogin(@RequestBody SellerLoginRequest sLReq){
         return sellerService.sLogin(sLReq);}
+    @PutMapping ("/{sID}")
+    public Seller updateSeller(@PathVariable Long sID, @RequestBody SellerSignUp seSignUp){
+        Seller sUpdated=sellerService.updateSeller(sID,seSignUp); return sUpdated;}
+    @DeleteMapping("/{sID}")
+    public void deleteSeller(@PathVariable Long sID){
+        sellerService.deleteSeller(sID);}
 }

@@ -11,10 +11,10 @@ public class Customer extends Basis {@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cID;
     private Long cAccountNumber;//고객 계좌 번호
-    private String cName;
+    private String cName;//고객 이름
     private Long cPW;
     private Long cPhoneNumber;
-    public void update(CustomerSignUp cSignUp){
+    public void cUpdate(CustomerSignUp cSignUp){
         this.cName=cSignUp.getCName();
         this.cPW=cSignUp.getCPW();
         this.cPhoneNumber=cSignUp.getCPhoneNumber();}

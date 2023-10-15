@@ -1,4 +1,6 @@
 package com.example.ecommercemain.domain;
+import com.example.ecommercemain.signup.CreateProductList;
+import com.example.ecommercemain.signup.CustomerSignUp;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -15,4 +17,11 @@ public class Product extends Basis {@Id
     private String pName; //물품 이름
     private String detail;//상세 설명
     private String category;//범주
+    public void pUpdate(CreateProductList cpl){
+        this.companyName=cpl.getCompanyName();
+        this.price=cpl.getPrice();
+        this.remainCount=cpl.getRemainCount();
+        this.pName=cpl.getPName();
+        this.detail=cpl.getDetail();
+        this.category=cpl.getCategory();}
 }

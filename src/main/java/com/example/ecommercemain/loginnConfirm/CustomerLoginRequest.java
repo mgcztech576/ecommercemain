@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CustomerLoginRequest {
-    @JsonProperty("name")
+    @JsonProperty("cname")
     private String cName;
-    @JsonProperty("pw")
+    @JsonProperty("cpw")
     private Long cPW;
 }

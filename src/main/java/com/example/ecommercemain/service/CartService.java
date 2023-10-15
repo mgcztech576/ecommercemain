@@ -1,9 +1,9 @@
 package com.example.ecommercemain.service;
 import com.example.ecommercemain.domain.Cart;
-import com.example.ecommercemain.domain.Product;
-import com.example.ecommercemain.loginnConfirm.ProductConfirm;
+import com.example.ecommercemain.domain.Customer;
 import com.example.ecommercemain.repository.CartRepository;
 import com.example.ecommercemain.signup.CreateCart;
+import com.example.ecommercemain.signup.CustomerSignUp;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -19,8 +19,13 @@ public class CartService {
 //        Product productConfirm= cartRepository.findBypName(confirm.getPName());
 //        if(productConfirm.getPID().longValue()==confirm.getPID()){
 //            return "Success";} return "Fail";}
-public String pconfirm(ProductConfirm confirm){// 물품 확인
-    Product productConfirm= cartRepository.findBypName(confirm.getPName());
-    if(productConfirm.getPID().longValue()==confirm.getPID()){
-        return "Success";} return "Fail";}
+//public String pconfirm(ProductConfirm confirm){// 물품 확인
+//    Product productConfirm= cartRepository.findBypName(confirm.getPName());
+//    if(productConfirm.getPID().longValue()==confirm.getPID()){
+//        return "Success";} return "Fail";}
+public Cart updateCart(Long cartID, CreateCart createCart){
+    Cart saved=cartRepository.findBycartID(cartID);
+    saved.cartUpdate(createCart); return saved;}
+    public void deleteCart(Long cartID){
+        cartRepository.deleteByCartID(cartID);}
 }

@@ -1,4 +1,5 @@
 package com.example.ecommercemain.loginnConfirm;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -6,6 +7,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SellerLoginRequest {
+    @JsonProperty("sname")
     private String sName;
+    @JsonProperty("cpw")
     private Long sPW;
 }

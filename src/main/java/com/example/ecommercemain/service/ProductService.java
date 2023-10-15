@@ -1,11 +1,13 @@
 package com.example.ecommercemain.service;
+import com.example.ecommercemain.domain.Customer;
 import com.example.ecommercemain.domain.Product;
-import com.example.ecommercemain.loginnConfirm.ProductConfirm;
 import com.example.ecommercemain.repository.ProductRepository;
 import com.example.ecommercemain.signup.CreateProductList;
+import com.example.ecommercemain.signup.CustomerSignUp;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+@Transactional
 @Service @RequiredArgsConstructor
 public class ProductService {
     private final ProductRepository productRepository;
@@ -18,4 +20,9 @@ public class ProductService {
 //        Product productConfirm= productRepository.findBypName(confirm.getPName());
 //        if(productConfirm.getPID().longValue()==confirm.getPID()){
 //            return "Success";} return "Fail";}
+public Product updateProduct(Long pID, CreateProductList cpl){
+    Product saved=productRepository.findBypID(pID);
+    saved.pUpdate(cpl); return saved;}
+    public void deleteProduct(Long pID){
+        productRepository.deleteBypID(pID);}
 }
