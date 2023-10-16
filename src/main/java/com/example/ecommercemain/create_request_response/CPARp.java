@@ -9,7 +9,7 @@ import lombok.*;
 @Builder
 public class CPARp extends Basis {@Id//CreateProductAccountResponse
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long companyName;//회사 이름
+    private String companyName;//회사 이름
     private Long price;
     private Long remainCount;//남은 개수
     private String pName;//물품 이름

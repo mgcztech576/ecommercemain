@@ -14,7 +14,7 @@ public class SellerController {
     public Seller createSeller(@RequestBody SellerSignUp seSignUp){
         Seller seller=sellerService
                 .createSeller(seSignUp); return seller;}
-    @GetMapping("/seller/{sID}")
+    @GetMapping("/get/{sID}")
     public Seller getSeller(@PathVariable Long sID){
     return sellerService.getSeller(sID);}
     @GetMapping("/provision")

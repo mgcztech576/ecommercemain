@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 public class SellerLoginRequest {
     @JsonProperty("sname")
     private String sName;
-    @JsonProperty("cpw")
+    @JsonProperty("spw")
     private Long sPW;
 }

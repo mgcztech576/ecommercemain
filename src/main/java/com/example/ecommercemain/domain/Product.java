@@ -11,7 +11,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 public class Product extends Basis {@Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long pID;//물품 id
-    private Long companyName;//회사 이름
+    private String companyName;//회사 이름
     private Long price;
     private Long remainCount;//남은 개수
     private String pName; //물품 이름

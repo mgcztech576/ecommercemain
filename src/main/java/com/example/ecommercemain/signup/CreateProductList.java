@@ -9,7 +9,7 @@ import lombok.*;
 @Builder
 public class CreateProductList {@Id
     @GeneratedValue
-    private Long companyName;//판매자 id
+    private String companyName;//회사 이름
     private Long price;
     private Long remainCount;//남은 개수
     private String pName;//물품 이름

@@ -24,5 +24,4 @@ public Product updateCustomer(@PathVariable Long pID, @RequestBody CreateProduct
     @DeleteMapping("delete/{pID}")
     public void deleteProduct(@PathVariable Long pID){
         productService.deleteProduct(pID);}
-
 }
