@@ -12,4 +12,5 @@ public class CCARp extends Basis {@Id//CreateCustomerAccountResponse
     private String cName;
     private Long cPW;
     private Long cPhoneNumber;
+    private Long cAccountNumber;
 }

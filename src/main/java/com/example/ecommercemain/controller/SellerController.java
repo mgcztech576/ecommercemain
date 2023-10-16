@@ -6,11 +6,11 @@ import com.example.ecommercemain.signup.SellerSignUp;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 @RestController
-@RequestMapping("/create/seller")
+@RequestMapping("/seller")
 @RequiredArgsConstructor
 public class SellerController {
     private final SellerService sellerService;
-    @PostMapping
+    @PostMapping("/create")
     public Seller createSeller(@RequestBody SellerSignUp seSignUp){
         Seller seller=sellerService
                 .createSeller(seSignUp); return seller;}
@@ -24,10 +24,10 @@ public class SellerController {
     @PostMapping("/sLogin")
     public String sLogin(@RequestBody SellerLoginRequest sLReq){
         return sellerService.sLogin(sLReq);}
-    @PutMapping ("/{sID}")
+    @PutMapping ("update/{sID}")
     public Seller updateSeller(@PathVariable Long sID, @RequestBody SellerSignUp seSignUp){
         Seller sUpdated=sellerService.updateSeller(sID,seSignUp); return sUpdated;}
-    @DeleteMapping("/{sID}")
+    @DeleteMapping("delete/{sID}")
     public void deleteSeller(@PathVariable Long sID){
         sellerService.deleteSeller(sID);}
 }

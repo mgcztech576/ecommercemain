@@ -7,18 +7,18 @@ import com.example.ecommercemain.signup.CustomerSignUp;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 @RestController
-@RequestMapping("/create/customer")
+@RequestMapping("/customer")
 @RequiredArgsConstructor
 public class CustomerController {
     //private final RedisTestService redisTestService;
     private final CustomerService customerService;
-    @PostMapping
+    @PostMapping("/create")
     public Customer createCustomer(@RequestBody CustomerSignUp cSignUp) {
         Customer customer=customerService
                 .createCustomer(cSignUp); return customer;}
     //@GetMapping("/get-lock")
     //public String getLock(){return redisTestService.getLock();}
-    @GetMapping("/customer/{cID}")
+    @GetMapping("/get/{cID}")
     public Customer getCustomer(@PathVariable Long cID){
         return customerService.getCustomer(cID);}
     @GetMapping("/provision")
@@ -28,10 +28,10 @@ public class CustomerController {
     @PostMapping("/cLogin")
     public String cLogin(@RequestBody CustomerLoginRequest cLReq){
         return customerService.cLogin(cLReq);}
-    @PutMapping ("/{cID}")
+    @PutMapping ("/update/{cID}")
     public Customer updateCustomer(@PathVariable Long cID, @RequestBody CustomerSignUp cSignUp){
         Customer cUpdated=customerService.updateCustomer(cID,cSignUp); return cUpdated;}
-    @DeleteMapping("/{cID}")
+    @DeleteMapping("/delete/{cID}")
     public void deleteCustomer(@PathVariable Long cID){
         customerService.deleteCustomer(cID);}
 }

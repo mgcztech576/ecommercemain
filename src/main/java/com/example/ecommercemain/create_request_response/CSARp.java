@@ -15,4 +15,5 @@ public class CSARp extends Basis {@Id//CreateSellerAccountResponse
     private Long sPhoneNumber;
     private String companyName;
     private String productName;
+    private Long sAccountNumber;
 }
