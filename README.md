@@ -1,4 +1,4 @@
-# 이커머스 - 물품 구매, 판매
+<img width="421" alt="스크린샷 2023-10-13 오후 6 34 50" src="https://github.com/mgcztech576/ecommercemain/assets/127584002/ea1d03ff-7550-4e70-a9f8-e6591c7ed87d"># 이커머스 - 물품 구매, 판매
 ### 상세정보
 1. 회원가입: 회원가입 시의 약관을 만들고 고객, 판매자에게 보여줌. 고객/판매자가 회원으로 가입할 때 정보를 기입할 수 있도록 시스템을 만듬
 
@@ -14,3 +14,4 @@ Spring Web, Spring Data JPA, H2 Database, Lombok, Validation
 Java, Spring, H2 Database
 ### ERD
 ![](/Users/mgcztech/Desktop/스크린샷 2023-10-13 오후 6.34.50.png)
+<img width="421" alt="스크린샷 2023-10-13 오후 6 34 50" src="https://github.com/mgcztech576/ecommercemain/assets/127584002/99f97c53-fb10-45ae-94f3-bd883b66fa61">
