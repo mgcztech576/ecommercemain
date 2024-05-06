@@ -15,3 +15,5 @@ Java, Spring, H2 Database
 ### ERD
 ![](/Users/mgcztech/Desktop/스크린샷 2023-10-13 오후 6.34.50.png)
 <img width="421" alt="스크린샷 2023-10-13 오후 6 34 50" src="https://github.com/mgcztech576/ecommercemain/assets/127584002/99f97c53-fb10-45ae-94f3-bd883b66fa61">
+
+<img width="850" alt="스크린샷 2024-05-06 오후 9 05 59" src="https://github.com/mgcztech576/ecommercemain/assets/127584002/61558070-9581-424b-8cef-e716485e317a">
